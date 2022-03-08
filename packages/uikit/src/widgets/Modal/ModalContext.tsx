@@ -1,20 +1,10 @@
-import { AnimatePresence, m, Variants, LazyMotion, domAnimation } from "framer-motion";
+import { AnimatePresence, domAnimation, LazyMotion, m } from "framer-motion";
 import React, { createContext, useState } from "react";
 import styled from "styled-components";
+import { animationMap, animationVariants } from "util/animationConstant";
 import { Overlay } from "../../components/Overlay";
 import { Handler } from "./types";
 
-const animationVariants: Variants = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 },
-};
-
-const animationMap = {
-  initial: "initial",
-  animate: "animate",
-  exit: "exit",
-};
 interface ModalsContext {
   isOpen: boolean;
   nodeId: string;
